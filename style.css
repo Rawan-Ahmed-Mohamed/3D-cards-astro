@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #070913;
+  color: #f0f4f8;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(1.5px 1.5px at 20px 30px, #ffffff, rgba(0, 0, 0, 0)), radial-gradient(1.5px 1.5px at 150px 180px, #ffffff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 280px 80px, #00f0ff, rgba(0, 0, 0, 0));
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.main-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.main-header h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  background: linear-gradient(135deg, #f0f4f8, #00f0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+  max-width: 1100px;
+}
+
+.card {
+  width: 290px;
+  height: 420px;
+  perspective: 1200px;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+}
+.card.is-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding: 22px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+.card-front {
+  background: rgba(18, 22, 38, 0.9);
+}
+.card-back {
+  background: rgba(12, 16, 28, 0.95);
+  transform: rotateY(180deg);
+  border-color: rgba(0, 240, 255, 0.3);
+}
+.card-back h3 {
+  font-family: "Orbitron", sans-serif;
+  color: #00f0ff;
+  font-size: 1.1rem;
+}
+.card-back .description {
+  font-size: 0.85rem;
+  color: #8e9aaf;
+  line-height: 1.4;
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 240, 255, 0.15);
+  color: #00f0ff;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+}
+.badge--giant {
+  background: rgba(255, 183, 3, 0.15);
+  color: #ffb703;
+  border-color: rgba(255, 183, 3, 0.3);
+}
+
+.planet-preview {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 15px auto 5px;
+}
+.planet-preview--mars {
+  background: radial-gradient(circle at 30% 30%, #ff7b54, #a02a00);
+  box-shadow: 0 0 20px rgba(255, 123, 84, 0.4);
+}
+.planet-preview--jupiter {
+  background: radial-gradient(circle at 30% 30%, #ffd166, #b07d2b);
+  box-shadow: 0 0 20px rgba(255, 209, 102, 0.4);
+}
+.planet-preview--saturn {
+  background: radial-gradient(circle at 30% 30%, #f4e0af, #a88b4a);
+  box-shadow: 0 0 20px rgba(244, 224, 175, 0.4);
+}
+
+h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.tagline {
+  text-align: center;
+  color: #8e9aaf;
+  font-size: 0.8rem;
+}
+
+.quick-stats {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px;
+  border-radius: 10px;
+}
+.quick-stats .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.quick-stats .stat .stat-value {
+  font-weight: 600;
+  color: #00f0ff;
+  font-size: 0.85rem;
+}
+.quick-stats .stat .stat-label {
+  font-size: 0.65rem;
+  color: #8e9aaf;
+}
+
+.specs .spec-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+.specs .spec-row .spec-data {
+  color: #00f0ff;
+  font-weight: 600;
+}
+
+.highlights {
+  list-style: none;
+  font-size: 0.75rem;
+}
+.highlights li {
+  margin-bottom: 4px;
+  color: #f0f4f8;
+}
+
+.price-tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+.price-tag span {
+  font-size: 0.75rem;
+  color: #8e9aaf;
+}
+.price-tag strong {
+  color: #ffb703;
+  font-size: 0.85rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn--flip {
+  background: transparent;
+  border: 1px solid #00f0ff;
+  color: #00f0ff;
+}
+.btn--flip:hover {
+  background: rgba(0, 240, 255, 0.15);
+}
+.btn--return {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f0f4f8;
+}
+.btn--return:hover {
+  background: rgba(255, 255, 255, 0.1);
+}/*# sourceMappingURL=style.css.map */
