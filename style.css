@@ -15,6 +15,15 @@ body {
   padding: 40px 20px;
 }
 
+/*edit for flip cards*/
+.card-toggle {
+  display: none;
+}
+
+.card-toggle:checked ~ .card-inner {
+  transform: rotateY(180deg);
+}
+
 .stars-container {
   position: fixed;
   top: 0;
@@ -60,9 +69,7 @@ body {
   transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform-style: preserve-3d;
 }
-.card.is-flipped .card-inner {
-  transform: rotateY(180deg);
-}
+
 .card-front, .card-back {
   position: absolute;
   width: 100%;
@@ -204,8 +211,8 @@ h2 {
   color: #ffb703;
   font-size: 0.85rem;
 }
-
 .btn {
+  display: block;
   width: 100%;
   padding: 10px;
   border-radius: 8px;
@@ -214,6 +221,8 @@ h2 {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
+  text-align: center;
+  user-select: none;
 }
 .btn--flip {
   background: transparent;
@@ -230,4 +239,4 @@ h2 {
 }
 .btn--return:hover {
   background: rgba(255, 255, 255, 0.1);
-}/*# sourceMappingURL=style.css.map */
+}
