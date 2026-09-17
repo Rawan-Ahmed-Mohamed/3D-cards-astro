@@ -11,22 +11,17 @@
 </head>
 <body>
 
-  <!-- Stars Background -->
   <div class="stars-container"></div>
-
-  <!-- Header -->
   <header class="main-header">
     <h1>Explore The Solar System</h1>
   </header>
-
-  <!-- Cards Container (Ordered by Distance to Sun) -->
   <main class="card-grid">
 
-    <!-- Card 1: Mars (4th Planet from Sun) -->
-    <article class="card">
-      <div class="card-inner">
-        <!-- Front -->
-        <div class="card-front">
+  <article class="card">
+  <input type="checkbox" id="mars-toggle" class="card-toggle">
+  <div class="card-inner">
+
+          <div class="card-front">
           <div class="badge">4th Planet</div>
           <div class="planet-preview planet-preview--mars"></div>
           <h2>Mars</h2>
@@ -43,10 +38,9 @@
             </div>
           </div>
 
-          <button type="button" class="btn btn--flip">View Details &rarr;</button>
-        </div>
+<label for="mars-toggle" class="btn btn--flip">View Details &rarr;</label>
+          </div>
 
-        <!-- Back -->
         <div class="card-back">
           <h3>Mars Profile</h3>
           <p class="description">The 4th planet from the Sun and the 2nd smallest planet in the solar system.</p>
@@ -72,15 +66,15 @@
             <strong>#4 Closest</strong>
           </div>
 
-          <button type="button" class="btn btn--return">&larr; Return</button>
+<label for="mars-toggle" class="btn btn--return">&larr; Return</label>
         </div>
       </div>
     </article>
 
-    <!-- Card 2: Jupiter (5th Planet from Sun) -->
     <article class="card">
+      <input type="checkbox" id="jupiter-toggle" class="card-toggle">
       <div class="card-inner">
-        <!-- Front -->
+
         <div class="card-front">
           <div class="badge badge--giant">Largest Planet</div>
           <div class="planet-preview planet-preview--jupiter"></div>
@@ -98,10 +92,10 @@
             </div>
           </div>
 
-          <button type="button" class="btn btn--flip">View Details &rarr;</button>
+<label for="jupiter-toggle" class="btn btn--flip">View Details &rarr;</label>
         </div>
 
-        <!-- Back -->
+
         <div class="card-back">
           <h3>Jupiter Profile</h3>
           <p class="description">The 5th planet from the Sun and the absolute largest planet in our solar system.</p>
@@ -127,15 +121,16 @@
             <strong>#5 Closest</strong>
           </div>
 
-          <button type="button" class="btn btn--return">&larr; Return</button>
+<label for="jupiter-toggle" class="btn btn--return">&larr; Return</label>
         </div>
       </div>
     </article>
 
-    <!-- Card 3: Saturn (6th Planet from Sun) -->
-    <article class="card">
+
+      <article class="card">
+        <input type="checkbox" id="saturn-toggle" class="card-toggle">
       <div class="card-inner">
-        <!-- Front -->
+
         <div class="card-front">
           <div class="badge">2nd Largest</div>
           <div class="planet-preview planet-preview--saturn"></div>
@@ -153,10 +148,10 @@
             </div>
           </div>
 
-          <button type="button" class="btn btn--flip">View Details &rarr;</button>
+<label for="saturn-toggle" class="btn btn--flip">View Details &rarr;</label>
         </div>
 
-        <!-- Back -->
+
         <div class="card-back">
           <h3>Saturn Profile</h3>
           <p class="description">The 6th planet from the Sun and the 2nd largest planet in the solar system.</p>
@@ -182,8 +177,7 @@
             <strong>#6 Closest</strong>
           </div>
 
-          <button type="button" class="btn btn--return">&larr; Return</button>
-        </div>
+<label for="saturn-toggle" class="btn btn--return">&larr; Return</label>        </div>
       </div>
     </article>
 
