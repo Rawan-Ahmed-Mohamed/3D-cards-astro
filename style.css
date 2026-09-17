@@ -15,11 +15,17 @@ body {
   padding: 40px 20px;
 }
 
-/*edit for flip cards*/
 .card-toggle {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
 }
 
+.card-toggle:checked + .card-inner {
+  transform: rotateY(180deg);
+}
 .card-toggle:checked ~ .card-inner {
   transform: rotateY(180deg);
 }
